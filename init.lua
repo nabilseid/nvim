@@ -1,3 +1,4 @@
+--require("plugins")
 
 vim.o.expandtab = true
 vim.o.tabstop = 2
