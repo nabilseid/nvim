@@ -1,0 +1,9 @@
+lazy-lock.json
+# Vim temp files #
+##################
+*.sw[n-q]
+
+# Visual Studio files generated files
+.vscode/
+
+.DS_Store
