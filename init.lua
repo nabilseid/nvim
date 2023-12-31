@@ -5,6 +5,9 @@ vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
 
+vim.o.autoindent = true
+vim.o.smartindent = true
+
 vim.o.colorcolumn = '80'
 
 -- lazy plugin manager
@@ -24,10 +27,19 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { 
     "nvim-telescope/telescope.nvim", tag = "0.1.5",
     dependencies = { "nvim-lua/plenary.nvim" }
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
   }
 }
 
@@ -53,4 +65,10 @@ configs.setup({
   indent = { enable = true },  
 })
 
+-- neo-tree
+vim.keymap.set('n', '<C-n>', ':Neotree source=filesystem reveal=true position=left toggle=true<CR>')
+vim.keymap.set('n', '<C-m>', ':Neotree position=float source=filesystem<CR>')
+vim.keymap.set('n', '<C-g>', ':Neotree float git_status<CR>')
+
 vim.cmd.colorscheme "catppuccin-macchiato"
+
