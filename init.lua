@@ -8,6 +8,7 @@ vim.o.shiftwidth = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
 
+vim.o.number = true
 vim.o.colorcolumn = '80'
 
 -- lazy plugin manager
