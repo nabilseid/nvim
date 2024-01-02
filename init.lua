@@ -1,5 +1,3 @@
---require("plugins")
-
 vim.o.expandtab = true
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
@@ -11,6 +9,16 @@ vim.o.smartindent = true
 vim.o.number = true
 vim.o.colorcolumn = '80'
 
+vim.g.mapleader = " "
+
+-- Go to prev diagnostics
+vim.keymap.set('n', '<leader>db', vim.diagnostic.goto_prev)
+-- Go to next diagnostics
+vim.keymap.set('n', '<leader>df', vim.diagnostic.goto_next)
+-- Telescope diagnostics
+vim.keymap.set('n', '<leader>dl', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>of', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>sll', vim.diagnostic.setloclist)
 -- lazy plugin manager
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
