@@ -7,5 +7,6 @@ return {
     vim.keymap.set('n', '<C-r>', builtin.live_grep, {})
     vim.keymap.set('n', '<C-b>', builtin.buffers, {})
     vim.keymap.set('n', '<C-h>', builtin.help_tags, {})
+    vim.keymap.set('n', '<leader>dl', builtin.diagnostics, { noremap = true, silent = true })
   end
 }
