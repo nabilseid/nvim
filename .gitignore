@@ -10,3 +10,4 @@
 !/tmux
 /tmux/*.sw[n-q]
 /tmux/.DS_Store
+/tmux/plugins/**
