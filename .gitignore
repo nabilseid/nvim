@@ -1,14 +1,12 @@
-# Vim temp files #
-##################
-*.sw[n-q]
+/*
+!.gitignore
 
-# Visual Studio files generated files
-.vscode/
+!/nvim
+/nvim/*.sw[n-q]
+/nvim/plugin/**
+/nvim/plugin/packer_compiled.lua
+/nvim/.DS_Store
 
-.DS_Store
-plugin/**
-plugin/packer_compiled.lua
-
-./*
-!/nvim/
-!/tmux/
+!/tmux
+/tmux/*.sw[n-q]
+/tmux/.DS_Store
