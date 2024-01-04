@@ -8,3 +8,7 @@
 .DS_Store
 plugin/**
 plugin/packer_compiled.lua
+
+./*
+!/nvim/
+!/tmux/
