@@ -9,5 +9,9 @@ return {
 		})
 
 		vim.keymap.set("n", "<S-f>", vim.lsp.buf.format, {})
+    -- code actions, need to be separated from lsp ca
+    -- diagnostics
+    -- completion
+    -- hover
 	end,
 }
