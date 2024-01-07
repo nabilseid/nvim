@@ -7,9 +7,16 @@ return {
     "MunifTanjim/nui.nvim",
   },
   config = function()
-    require("neo-tree").setup()
-    vim.keymap.set('n', '<C-n>', ':Neotree source=filesystem reveal=true position=left toggle=true<CR>')
-    vim.keymap.set('n', '<C-m>', ':Neotree position=float source=filesystem<CR>')
-    vim.keymap.set('n', '<C-g>', ':Neotree float git_status<CR>')
-  end
+    require("neo-tree").setup({
+      source_selector = {
+        winbar = false,
+      },
+    })
+
+    vim.wo.winbar = "" -- delete winbar set previously
+
+    vim.keymap.set("n", "<C-n>", ":Neotree source=filesystem reveal=true position=left toggle=true<CR>")
+    vim.keymap.set("n", "<C-m>", ":Neotree position=float source=filesystem<CR>")
+    vim.keymap.set("n", "<C-g>", ":Neotree float git_status<CR>")
+  end,
 }

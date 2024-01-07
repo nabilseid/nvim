@@ -18,8 +18,11 @@ vim.keymap.set("n", "<leader>db", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "<leader>df", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<leader>of", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>sll", vim.diagnostic.setloclist)
--- lazy plugin manager
 
+vim.keymap.set("n", "gt", "<cmd>bnext<cr>", { desc = "Go to next buffer" })
+vim.keymap.set("n", "gT", "<cmd>bprevious<cr>", { desc = "Go to previous buffer" })
+
+-- lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
