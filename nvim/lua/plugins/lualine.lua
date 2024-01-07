@@ -5,7 +5,7 @@ return {
     require("lualine").setup({
       options = {
         disabled_filetypes = {
-          winbar = { "neo-tree" }, -- diable winbar in neo tree
+          winbar = { "neo-tree", "alpah" },
           statusline = {},
         },
       },
@@ -26,10 +26,30 @@ return {
           },
         },
         lualine_b = {},
-        lualine_c = {},
+        lualine_c = {
+          {
+            "filetype",
+            colored = true,      -- Displays filetype icon in color if set to true
+            icon_only = true,    -- Display only an icon for filetype
+            icon = { align = "left" }, -- Display filetype icon on the right hand side
+            -- icon =    {'X', align='right'}
+            -- Icon string ^ in table is ignored in filetype component
+          },
+        },
         lualine_x = {},
         lualine_y = {},
-        lualine_z = { "buffers" },
+        lualine_z = {
+          {
+            "buffers",
+            show_modified_status = true,
+            use_mode_colors = true,
+            symbols = {
+              modified = " ●", -- Text to show when the buffer is modified
+              -- alternate_file = "#", -- Text to show to identify the alternate file
+              directory = "", -- Text to show when the buffer is a directory
+            },
+          },
+        },
       },
 
       inactive_winbar = {
@@ -47,10 +67,28 @@ return {
             },
           },
         },
-        lualine_b = {},
+        lualine_b = {
+          {
+            "filetype",
+            colored = true,
+            icon_only = true,
+            icon = { align = "left" },
+          },
+        },
         lualine_c = {},
         lualine_x = {},
-        lualine_y = { "buffers" },
+        lualine_y = {
+          {
+            "buffers",
+            show_modified_status = true,
+            use_mode_colors = true,
+            symbols = {
+              modified = " ●", -- Text to show when the buffer is modified
+              -- alternate_file = "#", -- Text to show to identify the alternate file
+              directory = "", -- Text to show when the buffer is a directory
+            },
+          },
+        },
         lualine_z = {},
       },
     })
