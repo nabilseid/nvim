@@ -21,6 +21,7 @@ vim.keymap.set("n", "<leader>sll", vim.diagnostic.setloclist)
 
 vim.keymap.set("n", "gt", "<cmd>bnext<cr>", { desc = "Go to next buffer" })
 vim.keymap.set("n", "gT", "<cmd>bprevious<cr>", { desc = "Go to previous buffer" })
+vim.keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Delete current buffer" })
 
 -- lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
