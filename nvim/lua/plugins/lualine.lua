@@ -29,9 +29,9 @@ return {
         lualine_c = {
           {
             "filetype",
-            colored = true,      -- Displays filetype icon in color if set to true
-            icon_only = true,    -- Display only an icon for filetype
-            icon = { align = "left" }, -- Display filetype icon on the right hand side
+            colored = true,
+            icon_only = true,
+            icon = { align = "left" },
           },
         },
         lualine_x = {},
