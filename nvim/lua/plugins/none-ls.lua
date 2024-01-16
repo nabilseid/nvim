@@ -12,6 +12,11 @@ return {
         -- formatting
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.black,
+
+        -- spelling & grammar
+        -- null_ls.builtins.diagnostics.cspell,
+         null_ls.builtins.diagnostics.codespell,
+        null_ls.builtins.diagnostics.write_good
       },
     })
 

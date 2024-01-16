@@ -29,6 +29,9 @@ return {
           "mypy",
           "ruff",
           "black",
+          "cspell",
+          "codespell",
+          "write-good"
         },
       })
     end,
