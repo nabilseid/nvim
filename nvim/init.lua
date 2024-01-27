@@ -23,6 +23,8 @@ vim.keymap.set("n", "gt", "<cmd>bnext<cr>", { desc = "Go to next buffer" })
 vim.keymap.set("n", "gT", "<cmd>bprevious<cr>", { desc = "Go to previous buffer" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete current buffer" })
 
+vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "Open lazygit" })
+
 -- lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
